@@ -123,8 +123,6 @@ img {
 
 .header {
   border-bottom: 1px solid var(--accent-color);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -194,7 +192,6 @@ img {
 
 .hero {
   max-width: 1440px;
-  height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
   margin-left: auto;
@@ -271,7 +268,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 264px;
   height: 112px;
   margin-bottom: 8px;
 
@@ -360,10 +356,6 @@ img {
 
 /* ----------------CUSTOMERS---------------- */
 
-.customers {
-  padding-top: 130px;
-}
-
 .customers-list {
   display: flex;
   gap: var(--column-gap-item-list);
@@ -371,7 +363,7 @@ img {
 }
 
 .customers-item {
-  width: 168px;
+  width: calc((100% - 120px) / 6);
   height: 88px;
 }
 
@@ -517,14 +509,16 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-item-link {
+  display: block;
+
+  color: inherit;
 }
 
-.portfolio-item-link {
-  color: inherit;
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-descr-item {
