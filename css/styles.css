@@ -88,6 +88,11 @@ img {
   text-transform: capitalize;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -101,14 +106,25 @@ img {
   overflow: hidden;
 }
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
+
+.social-icon {
+  fill: var(--light-color);
+}
+
 /* ----------------HEADER---------------- */
 
 .header {
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -177,10 +193,22 @@ img {
 /* ----------------HERO---------------- */
 
 .hero {
+  max-width: 1440px;
+  height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
+  margin-left: auto;
+  margin-right: auto;
 
-  background: var(--dark-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg-image.jpg);
+  background-color: var(--dark-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   text-align: center;
 }
@@ -239,6 +267,17 @@ img {
   letter-spacing: 0.02em;
 }
 
+.advantages-item-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+
+  background-color: var(--light-color);
+}
+
 /* ----------------ACTIVITY---------------- */
 
 .activity.section {
@@ -271,6 +310,8 @@ img {
   background-color: #fff;
 
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-descr-item {
@@ -291,10 +332,71 @@ img {
 }
 
 .team-item-text {
-  margin-top: 8px;
+  margin-bottom: 8px;
 
   text-align: center;
   letter-spacing: 0.02em;
+}
+
+.team-social-list {
+  display: flex;
+  gap: var(--column-gap-item-list);
+  justify-content: center;
+}
+
+.team-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-social-link {
+  background-color: var(--primary-brand-color);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--pressed-state-color);
+}
+
+/* ----------------CUSTOMERS---------------- */
+
+.customers {
+  padding-top: 130px;
+}
+
+.customers-list {
+  display: flex;
+  gap: var(--column-gap-item-list);
+  justify-content: center;
+}
+
+.customers-item {
+  width: 168px;
+  height: 88px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--subtle-text-color);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--pressed-state-color);
+}
+
+.customers-logo {
+  fill: var(--subtle-text-color);
+}
+
+.customers-link:hover .customers-logo,
+.customers-link:focus .customers-logo {
+  fill: var(--pressed-state-color);
 }
 
 /* ----------------FOOTER---------------- */
@@ -306,7 +408,13 @@ img {
   background: var(--hero-background-color);
 }
 
+.footer-container {
+  display: flex;
+}
+
 .footer-descr {
+  margin-right: 120px;
+
   max-width: 264px;
 }
 
@@ -321,6 +429,33 @@ img {
 
 .footer-text {
   color: var(--accent-color);
+}
+
+.footer-social-text {
+  margin-bottom: 16px;
+
+  color: #ffffff;
+
+  font-weight: 500;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--success-color);
 }
 
 /* ----------------PORTFOLIO---------------- */
@@ -362,6 +497,8 @@ img {
 .filter-btn:hover,
 .filter-btn:focus {
   border: 1px solid var(--pressed-state-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 
   color: #ffffff;
   background-color: var(--pressed-state-color);
@@ -378,6 +515,12 @@ img {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-link {
